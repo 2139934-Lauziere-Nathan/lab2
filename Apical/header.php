@@ -21,7 +21,7 @@
             <div class="avant"></div>
             <div class="apres">
                 <div id="menuicones" class="porteuroffset fix-menu" data-verticaloffset="47" data-horizontaloffset="0">
-                    <a href="https://apical.xyz"><img src="https://apical.xyz/medias/commun/Accueil-MenuSecondaire.svg"
+                    <a href="/"><img src="https://apical.xyz/medias/commun/Accueil-MenuSecondaire.svg"
                                                       alt="Accueil" title="Accueil"/></a>
 
 
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="centre">
-                <a href="https://apical.xyz"><img src="https://apical.xyz/medias/fr/LogoApical-blanc.svg"
+                <a href="/"><img src="https://apical.xyz/medias/fr/LogoApical-blanc.svg"
                                                   alt="Apical, ma plateforme d'apprentissage"/></a>
             </div>
         </div>
@@ -52,69 +52,37 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
 
                 <ul class="navbar-nav mx-auto">
-           
-                <?php
-    wp_list_pages(array(
-        
-        'title_li' => '', // Removes the title of the list
-        'link_before' => '<li class="nav-item px-lg-4"><a href="./?page_id='.get_the_ID().'" class=" nav-link text-uppercase text-expanded active">',
-        'link_after' => '</a></li>',
+
+
+<?php
+    $pages = get_pages(array(
+        'sort_column' => 'menu_order',
+        'post_type' => 'page',
+        'post_status' => 'publish',
     ));
+    
+    foreach ($pages as $page) {
+        $page_link = get_page_link($page->ID);
+        $page_title = $page->post_title;
+    ?>
+    <li class="nav-item px-lg-4">
+        <a href="<?php echo esc_url($page_link); ?>" class="nav-link text-uppercase text-expanded active">
+            <?php echo esc_html($page_title); ?>
+        </a>
+      
+    </li>
+    <?php
+    }
     ?>
 
 
-<!--
-                    <li class="nav-item px-lg-4 ">
-                        <a href="https://apical.xyz/formations"
-                           class=" nav-link text-uppercase text-expanded active">Formations <span class="sr-only">(actuel)</span></a>
-
-
-                    </li>
-
-
-                    <li class="nav-item px-lg-4">
-
-                        <a href="https://apical.xyz/articles"
-                           class="nav-link text-uppercase text-expanded ">Blogue </a>
-                           
-                    </li>
-
-
-                    <li class="nav-item px-lg-4 dropdown">
-                        <a href="https://apical.xyz/pages/formulairebcrypt" class="dropdown-toggle nav-link text-uppercase text-expanded" data-toggle="dropdown" data-target="#" aria-haspopup="true" aria-expanded="false">Outils </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item "
-                               href="https://apical.xyz/pages/formulairebcrypt">Hachage bcrypt </a>
-                            <a class="dropdown-item "
-                               href="https://apical.xyz/pages/aleatoire">Générateur aléatoire </a>
-                            <a class="dropdown-item "
-                               href="https://apical.xyz/pages/fontAwesome">Icônes Font Awesome </a>
-                        </div>
-                    </li>
-
-
-                    <li class="nav-item px-lg-4 dropdown">
-                        <a href="https://apical.xyz/contact"
-                           class="dropdown-toggle nav-link text-uppercase text-expanded "
-                           data-toggle="dropdown" data-target="#" aria-haspopup="true" aria-expanded="false">Aide </a>
-                        <div class="dropdown-menu">
-
-                            <a class="dropdown-item "
-                               href="https://apical.xyz/contact">Contact </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item "
-                               href="https://apical.xyz/apropos">À
-                                propos </a>
-                        </div>
-                    </li>
-    -->
                 </ul>
 
 
                 <div class="iconespourmobile">
                     <div id="menuicones" class="porteuroffset fix-menu" data-verticaloffset="47"
                          data-horizontaloffset="0">
-                        <a href="https://apical.xyz"><img
+                        <a href="/"><img
                                     src="https://apical.xyz/medias/commun/Accueil-MenuSecondaire.svg" alt="Accueil"
                                     title="Accueil"/></a>
 

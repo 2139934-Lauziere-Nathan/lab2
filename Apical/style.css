@@ -19591,6 +19591,7 @@ h1.titrequestionnairecontact {
 }
 
 footer {
+
     background-color: #f7f7f7;
     padding: 24px 0
 }
@@ -21994,6 +21995,8 @@ input[type=checkbox].valeurbd::after,input[type=checkbox].valeurlocale::after {
 
 }
 .tout_sauf_footer {
-    padding-left: 13%;
-    padding-right: 13%;
+    height: 100%;
+    width: 100%;
+    padding-left: 21%;
+    padding-right: 21%;
 }
