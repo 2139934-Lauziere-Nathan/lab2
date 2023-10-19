@@ -1,0 +1,4 @@
+# lab2
+reproduction en template de la page-web aplical.xyz
+le theme contier un header et footeur, un index et une page de contenus
+ceer par : Nathan Lauziere
