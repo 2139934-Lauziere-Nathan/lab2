@@ -20,7 +20,7 @@
             <div id="dragchapitres">
 
 
-                <?php 
+                <?php
 
                 if (have_posts()) :
                     $compteurForm = 0;

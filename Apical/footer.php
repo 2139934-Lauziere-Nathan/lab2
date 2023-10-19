@@ -64,45 +64,45 @@
     </div>
 
     <div id="formulaireauthentification">
-    <span id="messageauthentification"></span>
-    <form method="post" action="<?php echo wp_login_url(); ?>" class="form-horizontal">
-        <div class="form-group row">
-            <label for="user_login" class="control-label col-sm-5 requis">Usager: </label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" name="log" id="user_login" autofocus>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="user_pass" class="control-label col-sm-5 requis">Mot de passe: </label>
-            <div class="col-sm-6">
-                <input type="password" class="form-control" name="pwd" id="user_pass">
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="control-label col-sm-5"></div>
-            <div class="col-sm-6">
-                <div class="form-check">
-                    <label for="rememberme" class="form-check-label" checked>
-                        <input class="form-check-input" type="checkbox" id="rememberme" name="rememberme">
-                        Rester connecté
-                    </label>
+        <span id="messageauthentification"></span>
+        <form method="post" action="<?php echo wp_login_url(); ?>" class="form-horizontal">
+            <div class="form-group row">
+                <label for="user_login" class="control-label col-sm-5 requis">Usager: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="log" id="user_login" autofocus>
                 </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="control-label col-sm-5"></div>
-            <div class="col-sm-6">
-                <button type="submit" class="btn btn-secondary">Soumettre</button>
+            <div class="form-group row">
+                <label for="user_pass" class="control-label col-sm-5 requis">Mot de passe: </label>
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" name="pwd" id="user_pass">
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="control-label col-sm-5"></div>
-            <div class="col-sm-6">
-                <a href="https://apical.xyz/usagers/creation">Nouvel usager</a>
+            <div class="form-group row">
+                <div class="control-label col-sm-5"></div>
+                <div class="col-sm-6">
+                    <div class="form-check">
+                        <label for="rememberme" class="form-check-label" checked>
+                            <input class="form-check-input" type="checkbox" id="rememberme" name="rememberme">
+                            Rester connecté
+                        </label>
+                    </div>
+                </div>
             </div>
-        </div>
-    </form>
-</div>
+            <div class="form-group row">
+                <div class="control-label col-sm-5"></div>
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-secondary">Soumettre</button>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-sm-5"></div>
+                <div class="col-sm-6">
+                    <a href="https://apical.xyz/usagers/creation">Nouvel usager</a>
+                </div>
+            </div>
+        </form>
+    </div>
 
 
     <span class="boutonrefermer"></span>
